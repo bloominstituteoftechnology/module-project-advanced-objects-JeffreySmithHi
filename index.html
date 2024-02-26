@@ -63,16 +63,11 @@
           this.altitude -= number
           return this.altitude
           }
-          
-           else if(this.altitude > 0){
-            let remainingAltitude = this.altitude
             this.altitude = 0
-            return remainingAltitude
-            } else {
-              return 'CRASH!'
-            }
+            return 'CRASH!'
           }
         }
+      
     
 
     // 👉 CHALLENGE 3
@@ -121,39 +116,22 @@
     //   minusThree.count() // returns null
     //   minusThree.count() // returns null
     class CountDown {
-    constructor() {
-        this.count = 10;
+    constructor(num) {
+        this.number = num;
     }
 
-    minusFour(count) {
-        if (this.count > 0) {
-            this.count--;
-            return this.count + '!';
-        } else {
-            return null;
-        }
-    }
-
-    minusThree(number) {
-        if (this.count > 0) {
-            this.count--;
-            return this.count + '!';
-        } else if(this.count = 0){
+    count(){
+        if(this.number >= 1){
+          let result = this.number
+          this.number--
+        return `${result}!`
+        } if(this.number === 0){
+          this.number--
           return 'Liftoff!'
-        } else {
-            return null;
         }
+      
+      }
     }
-
-    minusTwo(number) {
-        if (this.count > 0) {
-            this.count--;
-            return this.count + '!';
-        } else {
-            return null;
-        }
-    }
-}
 
 
 
